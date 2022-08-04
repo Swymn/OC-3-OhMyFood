@@ -2,13 +2,57 @@
     --color-primary: #9356dc;
     --color-secondary: #ff79da;
     --color-tertiary: #99e2d0;
+    --color-footer: #353535;
 }
 
-/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;;
+}
 
-    Styles :
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shrikhand', cursive;
+}
 
-    Logo and titles -> font-family: 'Shrikhand', cursive;
-    Text            -> font-family: font-family: 'Roboto', sans-serif;
+.header-title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2vh 0;
+    text-align: center;
+}
 
-*/
+footer {
+    background-color: var(--color-footer);
+    width: 100%;
+    padding: 1.5vh 2vh;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.link-item {
+    margin: 1vw 0;
+    display: flex;
+    align-items: center;
+}
+
+.link-item a {
+    color: #fff;
+}
+
+.logo {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+    fill: #fff;
+}
