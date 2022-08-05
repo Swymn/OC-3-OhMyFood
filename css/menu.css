@@ -1,0 +1,106 @@
+main {
+    background-color: #f6f6f6;
+}
+
+.main-picture {
+    width: 100%;
+    background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    /* position: absolute; */
+    bottom: -3rem;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    padding: 4rem 2rem 0;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.container-header-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+/* Container Enter */
+
+.container-menu {
+    margin: 6rem 0;
+}
+
+.container-menu:last-child {
+    margin-bottom: 0;
+}
+
+.container-menu:last-child .box:last-child {
+    margin-bottom: 0;
+}
+
+.container-title {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 6rem;
+    border: 3.5px solid var(--color-tertiary);
+    margin: .75rem 0;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
+}
+
+.box-description {
+    font-size: 2rem;
+}
+
+.box-description > h2, .box-description > p {
+    margin: .5rem 0;
+}
+
+.box-price {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    margin-right: 1.5rem;
+}
+
+/* Commands */
+
+.commands {
+    margin: 4rem 0;
+    background-color: #f6f6f6;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commands-button {
+    border: none;
+    border-radius: 10rem;
+    background: linear-gradient(175deg, rgba(255, 121, 218, .75) 0%, rgba(147, 86, 220, .75) 100%);
+    font-size: 3rem;
+    padding: 2rem 8rem;
+    color: #fff;
+}
