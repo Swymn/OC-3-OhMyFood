@@ -24,6 +24,10 @@ header {
     justify-content: center;
 }
 
+body {
+    background-color: #f6f6f6;
+}
+
 .icon {
     width: 3rem;
     height: 3rem;
@@ -49,14 +53,14 @@ header {
 footer {
     background-color: var(--color-dark);
     width: 100%;
-    padding: 1.5vh 2vh;
+    padding: 3vh;
 }
 
 .footer-title {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 
 .footer-links {
@@ -64,8 +68,8 @@ footer {
 }
 
 .link-item {
-    font-size: 1.5rem;
-    margin: 1vw 0;
+    font-size: 2rem;
+    margin: 1.5vw 0;
     display: flex;
     align-items: center;
 }
