@@ -68,7 +68,7 @@ main {
     display: flex;
     justify-content: space-between;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
-    animation: fade 1.5s;
+    animation: move 1.5s;
 }
 
 .box-description {
@@ -109,11 +109,13 @@ main {
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
 }
 
-@keyframes fade {
+@keyframes move {
     from {
         opacity: 0;
+        transform: translateY(1rem);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
