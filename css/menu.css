@@ -68,6 +68,7 @@ main {
     display: flex;
     justify-content: space-between;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
+    animation: fade 1.5s;
 }
 
 .box-description {
@@ -106,4 +107,13 @@ main {
     padding: 2rem 8rem;
     color: #fff;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
