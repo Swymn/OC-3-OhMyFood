@@ -1,0 +1,94 @@
+$colors: (
+    primary: #9356dc,
+    secondary: #ff79da,
+    tertiary: #99e2d0,
+    dark: #353535,
+    light: #f6f6f6,
+    white: #fff,
+    black: #000,
+);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: 'Shrikhand', cursive;
+}
+
+body {
+    background: map-get($colors, light);
+}
+
+/* Global Style */
+.icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    padding: 2vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .go-back {
+        position: absolute;
+        left: 5rem;
+
+        >.header-icon {
+            fill: map-get($colors, dark);
+            width: 5rem;
+            height: 5rem;
+        }
+    } 
+
+    .header-title {
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: map-get($colors, dark);
+    width: 100%;
+    padding: 3vh;
+
+    .footer-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: map-get($colors, light);
+        margin-bottom: 2vh;
+    }
+
+    .footer-links {
+        list-style-type: none;
+
+        .link-item {
+            font-size: 2rem;
+            margin: 1.5vw 0;
+            display: flex;
+            align-items: center;
+
+            a {
+                color: map-get($colors, white);
+                text-decoration: none;
+            }
+
+            .logo {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: 1rem;
+                fill: map-get($colors, white);
+            }
+        }
+    }
+}
