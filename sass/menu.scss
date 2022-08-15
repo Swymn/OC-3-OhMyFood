@@ -95,6 +95,8 @@ main {
 }
 
 .commands {
+    position: relative;
+    top: -4rem;
     margin: 4rem 0;
     background-color: map-get($colors, light);
     height: 15rem;
