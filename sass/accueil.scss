@@ -1,15 +1,4 @@
-$colors: (
-    primary: #9356dc,
-    secondary: #ff79da,
-    tertiary: #99e2d0,
-    dark: #353535,
-    light: #f6f6f6,
-    white: #fff,
-    black: #000,
-);
-
-$lime-light-color: #99e2d0;
-$lime-color: #008766;
+@import 'shared/utils';
 
 .localisation {
     display: flex;
@@ -82,55 +71,7 @@ $lime-color: #008766;
         align-items: center;
         justify-content: center;
 
-        .box {
-            background-color: map-get($colors, light);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            border-radius: 2rem;
-            padding: 0 3rem;
-            margin-bottom: 4rem;
-            width: 90%;
-            height: 10rem;
-            box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
-
-            &:last-child {
-                background-color: rgba(147, 86, 220, 0.15);
-
-                .box-icon {
-                    fill: map-get($colors, primary);
-                }
-            }
-
-            .box-badge {
-                background-color: map-get($colors, primary);
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                left: -2rem;
-                border-radius: 100%;
-                height: 4rem;
-                width: 4rem;
-                text-align: center;
-                font-weight: 400;
-                font-size: 2.1rem;
-                color: map-get($colors, white);
-            }
-
-            .box-icon {
-                position: absolute;
-                left: 5rem;
-                fill: map-get($colors, dark);
-            }
-
-            .box-title {
-                font-size: 2.5rem;
-                font-weight: bold;
-                text-align: center;
-            }
-        }
+        @import 'shared/item';
     }
 }
 
@@ -145,75 +86,5 @@ $lime-color: #008766;
         margin: 3rem 0;
     }
 
-    .restaurant-box {
-        background-color: map-get($colors, white);
-        border-radius: 2rem;
-        box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 35rem;
-        margin: 3rem 0;
-        text-decoration: none;
-        color: map-get($colors, black);
-
-        .restaurant-box-picture-container {
-            width: 100%;
-            height: 25rem;
-            position: relative;
-
-            .new {
-                position: absolute;
-                width: 13rem;
-                height: 4.5rem;
-                background-color: $lime-light-color;
-                color: $lime-color;
-                font-size: 2rem;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: .5rem;
-                right: 2rem;
-                top: 2rem;
-                box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.25);
-            }
-
-            .restaurant-box-picture {
-                border-top-left-radius: 2rem;
-                border-top-right-radius: 2rem;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .restaurant-box-footer {
-            background-color: #fff;
-            border-bottom-left-radius: 2rem;
-            border-bottom-right-radius: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2.5rem;
-            width: 100%;
-            height: 10rem;
-
-            .restaurant-box-description-title {
-                font-size: 3rem;
-                font-weight: bold;
-                margin-bottom: 0.25rem;
-            }
-
-            .restaurant-box-description-description {
-                font-size: 2rem;
-            }
-        }
-
-        .restaurant-box-icon {
-            fill: map-get($colors, dark);
-        }
-    }
+    @import 'shared/card';
 }

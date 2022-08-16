@@ -1,12 +1,4 @@
-$colors: (
-    primary: #9356dc,
-    secondary: #ff79da,
-    tertiary: #99e2d0,
-    dark: #353535,
-    light: #f6f6f6,
-    white: #fff,
-    black: #000,
-);
+@import 'shared/utils';
 
 * {
     margin: 0;

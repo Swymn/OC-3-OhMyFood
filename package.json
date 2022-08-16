@@ -6,7 +6,8 @@
   "scripts": {
     "main": "sass --watch ./sass/main.scss:./css/main.css --style compressed",
     "accueil": "sass --watch ./sass/accueil.scss:./css/accueil.css --style compressed",
-    "menu": "sass --watch ./sass/menu.scss:./css/menu.css --style compressed"
+    "menu": "sass --watch ./sass/menu.scss:./css/menu.css --style compressed",
+    "all": "sass --watch ./sass/main.scss:./css/main.css --style compressed && sass --watch ./sass/accueil.scss:./css/accueil.css --style compressed && sass --watch ./sass/menu.scss:./css/menu.css --style compressed"
   },
   "repository": {
     "type": "git",
