@@ -1,0 +1,94 @@
+@import 'shared/utils';
+
+main {
+    background-color: map-get($colors, light);
+}
+
+.main-picture {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+} 
+
+.container {
+    position: relative;
+    top: -8rem;
+    bottom: -3rem;
+    width: 100%;
+    background-color: map-get($colors, light);
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    padding: 4rem 3.5rem 0;
+
+    .container-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+
+        .container-header-title {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+    }
+
+    .container-menu {
+        margin: 6rem 0;
+
+        &:last-child {
+            margin-bottom: 0;
+
+            .box:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .container-title {
+            font-size: 2.5rem;
+            color: map-get($colors, dark);
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 6rem;
+            border: 3.5px solid map-get($colors, tertiary);
+            margin: .75rem 0;
+        }
+
+        @import 'shared/box';
+    }
+}
+
+.commands {
+    position: relative;
+    top: -4rem;
+    margin: 4rem 0;
+    background-color: map-get($colors, light);
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .commands-button {
+        border: none;
+        border-radius: 10rem;
+        background: linear-gradient(175deg, rgba(255, 121, 218, .75) 0%, rgba(147, 86, 220, .75) 100%);
+        font-size: 3rem;
+        padding: 2rem 8rem;
+        color: map-get($colors, white);
+        box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
+    }
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

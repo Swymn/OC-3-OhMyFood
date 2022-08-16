@@ -1,0 +1,28 @@
+.box {
+    background-color: map-get($colors, white);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
+    animation: move 1.5s;
+
+    .box-description {
+        font-size: 2rem;
+
+        >h2,
+        >p {
+            margin: .5rem 0;
+        }
+    }
+
+    .box-price {
+        display: flex;
+        align-items: flex-end;
+        font-size: 2rem;
+        font-weight: bold;
+        color: map-get($colors, dark);
+        margin-right: 1.5rem;
+    }
+}
