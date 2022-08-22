@@ -63,9 +63,14 @@
         .card-description-description {
             font-size: 2rem;
         }
-    }
 
-    .card-icon {
-        fill: map-get($colors, dark);
+        .card-icon {
+            // fill: linear-gradient(175deg, map-get($colors, secondary) 0%, map-get($colors, primary) 100%);
+            // fill: map-get($colors, primary);
+            // fill: map-get($colors, white);
+            &:hover, &:focus {
+                fill: map-get($colors, primary);
+            }
+        }
     }
 }
