@@ -1,13 +1,21 @@
 @import 'shared/utils';
 
+
+
 .loader-container {
-    @include center;
+    position: fixed;
+    height: 100%;
     width: 100%;
-    height: 75vh;
-    position: relative;
-    top: 0;
     left: 0;
-    z-index: 1;
+    top: 0;
+    background-color: hsla(0, 0%, 100%, .9);
+    animation: loader .1s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /**
      * @TODO: remove this when the animation is done
@@ -20,7 +28,28 @@
         border-radius: 50%;
         display: inline-block;
         box-sizing: border-box;
-        animation: spin 1s linear infinite;
+    }
+
+    span {
+        animation: spin 1s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes loader {
+        100% {
+            display: none;
+            z-index: -5;
+        }
     }
 }
 
@@ -105,14 +134,4 @@
     }
 
     @import 'shared/card';
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }

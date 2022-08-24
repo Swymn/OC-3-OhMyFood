@@ -1,28 +1,42 @@
-$animation_time: 2s;
+$animation_time: 1s;
 $margin_size: 1.5rem;
 
 .box {
-    position: relative;
     overflow: hidden;
     background-color: map-get($colors, white);
     border-radius: 2rem;
-    padding: $margin_size;
     margin: $margin_size 0 calc($margin_size * 2);
     display: flex;
     justify-content: space-between;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
     animation: move $animation_time;
-    transition: all $animation_time;
+    height: 10rem;
 
     .box-description {
+        margin: $margin_size;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 2rem;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
-        h2,
-        p {
-            margin: .5rem 0;
+        .box-desc {
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;    
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
     }
 
@@ -36,28 +50,21 @@ $margin_size: 1.5rem;
     }
 
     .box-badge {
+        @include center;
         border-top-right-radius: 2rem;
         border-bottom-right-radius: 2rem;
         background-color: map-get($colors, tertiary);
-        position: absolute;
-        @include center;
         display: none;
-        right: 0;
-        top: 0;
-        width: 10rem;
+        width: 25%;
         height: 100%;
 
         .badge {
             fill: map-get($colors, white);
-            animation: rotate 2s;
+            animation: rotate $animation_time;
         }
     }
 
     &:hover {
-
-        .box-description {
-            animation: size $animation_time linear;
-        }
 
         .box-badge {
             animation: logo $animation_time linear;
@@ -66,21 +73,13 @@ $margin_size: 1.5rem;
     }
 }
 
-@keyframes size {
-    from {
-        width: 100%;
-    }
-
-    to {
-        width: calc(100% - 10rem);
-    }
-}
-
 @keyframes logo {
     from {
+        width: 0;
         transform: translateX(10rem);
     }
     to {
+        width: 25%;
         transform: translateX(0);
     }
 }
