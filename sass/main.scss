@@ -26,9 +26,7 @@ body {
 .header {
     position: relative;
     padding: 2vh 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
 
     .go-back {
         position: absolute;

@@ -1,18 +1,27 @@
+$animation_time: 2s;
+$margin_size: 1.5rem;
+
 .box {
+    position: relative;
+    overflow: hidden;
     background-color: map-get($colors, white);
     border-radius: 2rem;
-    padding: 1.5rem;
-    margin: 1.5rem 0 3rem;
+    padding: $margin_size;
+    margin: $margin_size 0 calc($margin_size * 2);
     display: flex;
     justify-content: space-between;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
-    animation: move 3s;
+    animation: move $animation_time;
+    transition: all $animation_time;
 
     .box-description {
         font-size: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
-        >h2,
-        >p {
+        h2,
+        p {
             margin: .5rem 0;
         }
     }
@@ -23,6 +32,64 @@
         font-size: 2rem;
         font-weight: bold;
         color: map-get($colors, dark);
-        margin-right: 1.5rem;
+        margin-right: $margin_size;
+    }
+
+    .box-badge {
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        background-color: map-get($colors, tertiary);
+        position: absolute;
+        @include center;
+        display: none;
+        right: 0;
+        top: 0;
+        width: 10rem;
+        height: 100%;
+
+        .badge {
+            fill: map-get($colors, white);
+            animation: rotate 2s;
+        }
+    }
+
+    &:hover {
+
+        .box-description {
+            animation: size $animation_time linear;
+        }
+
+        .box-badge {
+            animation: logo $animation_time linear;
+            display: flex;
+        }
+    }
+}
+
+@keyframes size {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: calc(100% - 10rem);
+    }
+}
+
+@keyframes logo {
+    from {
+        transform: translateX(10rem);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

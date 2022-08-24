@@ -20,11 +20,9 @@
     }
 
     .item-badge {
+        @include center;
         background-color: map-get($colors, primary);
         position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         left: -2rem;
         border-radius: 100%;
         height: 4rem;
