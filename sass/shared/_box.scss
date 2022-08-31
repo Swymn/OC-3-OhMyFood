@@ -13,21 +13,24 @@ $margin_size: 1.5rem;
     height: 10rem;
 
     .box-description {
+        width: 100%;
         margin: $margin_size;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
         font-size: 2rem;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        .box-desc {
-            width: 100%;
+        h2 {
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space: nowrap;    
+            white-space: nowrap;
+        }
+
+        .box-desc {
+            width: 100%;  
             display: flex;
             flex-direction: row;
             justify-content: space-between;
