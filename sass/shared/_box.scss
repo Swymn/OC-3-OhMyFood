@@ -1,19 +1,42 @@
+$animation_time: 1s;
+$margin_size: 1.5rem;
+
 .box {
+    overflow: hidden;
     background-color: map-get($colors, white);
     border-radius: 2rem;
-    padding: 1.5rem;
-    margin: 1.5rem 0 3rem;
+    margin: $margin_size 0 calc($margin_size * 2);
     display: flex;
     justify-content: space-between;
     box-shadow: 7px 8px 20px 8px rgba(0, 0, 0, 0.19);
-    animation: move 3s;
+    animation: move $animation_time;
+    height: 10rem;
 
     .box-description {
+        margin: $margin_size;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        >h2,
-        >p {
-            margin: .5rem 0;
+        .box-desc {
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;    
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
     }
 
@@ -23,6 +46,49 @@
         font-size: 2rem;
         font-weight: bold;
         color: map-get($colors, dark);
-        margin-right: 1.5rem;
+        margin-right: $margin_size;
+    }
+
+    .box-badge {
+        @include center;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        background-color: map-get($colors, tertiary);
+        display: none;
+        width: 25%;
+        height: 100%;
+
+        .badge {
+            fill: map-get($colors, white);
+            animation: rotate $animation_time;
+        }
+    }
+
+    &:hover {
+
+        .box-badge {
+            animation: logo $animation_time linear;
+            display: flex;
+        }
+    }
+}
+
+@keyframes logo {
+    from {
+        width: 0;
+        transform: translateX(10rem);
+    }
+    to {
+        width: 25%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

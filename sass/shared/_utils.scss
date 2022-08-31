@@ -10,3 +10,9 @@ $colors: (
 
 $lime-light-color: #99e2d0;
 $lime-color: #008766;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

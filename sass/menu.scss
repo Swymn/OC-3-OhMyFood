@@ -66,9 +66,7 @@ main {
     margin: 4rem 0;
     background-color: map-get($colors, light);
     height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
 
     .commands-button {
         border: none;

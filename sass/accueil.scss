@@ -1,9 +1,60 @@
 @import 'shared/utils';
 
-.localisation {
+
+
+.loader-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0, 0%, 100%, .9);
+    animation: loader .1s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /**
+     * @TODO: remove this when the animation is done
+     */
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid map-get($colors, black);
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    span {
+        animation: spin 1s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes loader {
+        100% {
+            display: none;
+            z-index: -5;
+        }
+    }
+}
+
+.localisation {
+    @include center;
     background-color: #eaeaea;
     color: map-get($colors, dark);
     padding: 4vw;
@@ -21,11 +72,9 @@
 }
 
 .restaurant-book {
+    @include center;
     background-color: map-get($colors, light);
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 5rem 4rem;
 
     .restaurant-book-title {
@@ -66,10 +115,8 @@
     }
 
     .operation-container {
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
         @import 'shared/item';
     }
