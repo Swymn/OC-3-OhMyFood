@@ -2,7 +2,6 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -22,14 +21,14 @@ body {
 }
 
 .fa-icon {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
 }
 
 /* Header */
 
 .header {
     position: relative;
-    padding: 2vh 0;
+    padding: 2rem 0;
     @include center;
 
     .go-back {
@@ -54,13 +53,13 @@ body {
 .footer {
     background-color: map-get($colors, dark);
     width: 100%;
-    padding: 3vh;
+    padding: 3rem;
 
     .footer-title {
         font-size: 2rem;
         font-weight: bold;
         color: map-get($colors, light);
-        margin-bottom: 2vh;
+        margin-bottom: 2rem;
     }
 
     .footer-links {
@@ -68,7 +67,7 @@ body {
 
         .link-item {
             font-size: 2rem;
-            margin: 1.5vw 0;
+            margin: 1.5rem 0;
             display: flex;
             align-items: center;
 
