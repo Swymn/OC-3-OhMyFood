@@ -53,6 +53,7 @@ main {
         .divider {
             width: 6rem;
             border: 3.5px solid map-get($colors, tertiary);
+            background-color: map-get($colors, tertiary);
             margin: .75rem 0;
         }
 
